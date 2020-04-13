@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            print("jumping");
         }
     }
 
