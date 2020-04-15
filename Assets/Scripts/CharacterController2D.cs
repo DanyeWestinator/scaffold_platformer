@@ -125,6 +125,7 @@ public class CharacterController2D : MonoBehaviour
         Vector2 localScale = gameObject.transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+        gameObject.transform.localScale = new Vector3(localScale.x, localScale.y, 1);
     }
 
     //-////////////////////////////////////////////////////
