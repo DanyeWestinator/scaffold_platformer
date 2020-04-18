@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/jay_scene.unity
+- path: Assets/Scenes/jerome_scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
