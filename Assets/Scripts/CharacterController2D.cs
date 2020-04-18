@@ -34,6 +34,8 @@ public class CharacterController2D : MonoBehaviour
     private int m_AirJumpsLeft;
     private Vector3 m_Velocity = Vector3.zero;
 
+    public Animator animator;
+
     [HideInInspector] public Rigidbody2D m_RigidBody2D;
     //private Animator animator; //If using animations
 
@@ -51,7 +53,9 @@ public class CharacterController2D : MonoBehaviour
     {
         m_Grounded = Physics2D.Linecast(transform.position, m_GroundCheck.position, m_GroundLayer);
         if (m_Grounded)
+        {
             m_AirJumpsLeft = m_AirJumps;
+        }
     }
 
     //-////////////////////////////////////////////////////
