@@ -17,10 +17,19 @@ public class HurtBox : MonoBehaviour
     ///
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")//if Player hits the weakspot then
+        if(collision.tag == "playerGunShot")//if bullet hits enemy
         {
             mainObject.SetActive(false); //Deactivate the mainObject scene object. We could destroy, but in order to still have access to such object 
                                          //so we can do things like reviving it, we deactivate it instead. 
         }
     }
+    
+    //public void OnCollisionEnter2D(Collision2D other)
+    //{
+    //   //should deactivate enemy when hit by player's bullet
+    //   if(GetComponent<Collider2D>().IsTouching(GameObject.FindWithTag("playerGunShot").GetComponent<Collider2D>()))
+    //   {
+    //      mainObject.SetActive(false);
+    //   }
+    //}
 }
