@@ -39,6 +39,5 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         playerHealth.HealDamage(playerHealth.maxHealth);
         player.transform.position = SpawnPosition.position;
-
     }
 }

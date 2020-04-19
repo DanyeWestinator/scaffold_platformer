@@ -34,6 +34,8 @@ public class CharacterController2D : MonoBehaviour
     private int m_AirJumpsLeft;
     private Vector3 m_Velocity = Vector3.zero;
 
+    private SpriteRenderer sr;
+
     public Animator animator;
 
     [HideInInspector] public Rigidbody2D m_RigidBody2D;
@@ -44,6 +46,7 @@ public class CharacterController2D : MonoBehaviour
     void Awake()
     {
         m_RigidBody2D = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         //animator = GetComponent<Animator>(); //get animator component
     }
 
@@ -126,10 +129,15 @@ public class CharacterController2D : MonoBehaviour
     void Flip()
     {
         m_FacingRight = !m_FacingRight;
-        Vector2 localScale = gameObject.transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
-        gameObject.transform.localScale = new Vector3(localScale.x, localScale.y, 1);
+
+        if (!m_FacingRight)
+            sr.flipX = true;
+        else
+            sr.flipX = false;
+        //Vector2 localScale = gameObject.transform.localScale;
+        //localScale.x *= -1;
+        //transform.localScale = localScale;
+        //gameObject.transform.localScale = new Vector3(localScale.x, localScale.y, 1);
     }
 
     //-////////////////////////////////////////////////////

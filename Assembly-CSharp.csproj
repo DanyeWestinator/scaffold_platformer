@@ -62,6 +62,8 @@
      <Compile Include="Assets\Scripts\DeadZone.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HurtBox.cs" />
+     <Compile Include="Assets\Scripts\Jerome\FaceMouse.cs" />
+     <Compile Include="Assets\Scripts\Jerome\PlayerMovement2.cs" />
      <Compile Include="Assets\Scripts\Patrol.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
