@@ -4,10 +4,10 @@ using UnityEngine;
 
 //-////////////////////////////////////////////////////
 ///
-/// HurtBox is the "weakness" area of an entity, if the player hits an enemy on such spot the enemy takes damage. This script is attached to an object
-/// with a "HurtBox tag.
+/// HitBox is the "weakness" area of an entity, if the player hits an enemy on such spot the enemy takes damage. This script is attached to an object
+/// with a "HitBox" tag.
 ///
-public class HurtBox : MonoBehaviour 
+public class snailHitBox : MonoBehaviour 
 {
     public GameObject mainObject;
 

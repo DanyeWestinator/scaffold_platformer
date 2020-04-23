@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class gunFlip : MonoBehaviour
 {
+    public float gunSizeScale;
+    public float x_offset;
+    public float y_offset;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,16 +17,17 @@ public class gunFlip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxisRaw("Horizontal") == 1)
+        //if player is facing/shooting to the right, gun must also face right
+        if(transform.parent.GetComponent<playerShoot>().rightShoot == 1)
         {
-           transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-           transform.localPosition = new Vector3(0.45f, -0.05f, -0.1f);
+           transform.localScale = new Vector3(gunSizeScale, Mathf.Abs(gunSizeScale), Mathf.Abs(gunSizeScale));
+           transform.localPosition = new Vector3(0.45f + x_offset, -0.05f + y_offset, -0.1f);
         }
-        
-        if(Input.GetAxisRaw("Horizontal") == -1)
+        //same for left
+        if(transform.parent.GetComponent<playerShoot>().rightShoot == -1)
         {
-           transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
-           transform.localPosition = new Vector3(-0.45f, -0.05f, -0.1f);
+           transform.localScale = new Vector3(-1 * gunSizeScale, Mathf.Abs(gunSizeScale), Mathf.Abs(gunSizeScale));
+           transform.localPosition = new Vector3(-0.45f - x_offset, -0.05f + y_offset, -0.1f);
         }
     }
 }
