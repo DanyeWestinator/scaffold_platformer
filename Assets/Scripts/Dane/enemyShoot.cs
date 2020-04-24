@@ -20,7 +20,6 @@ public class enemyShoot : MonoBehaviour
     {
         Vector3 direction = new Vector3(gameObject.transform.localScale.x * -1, 0f, 0f);
         RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, direction, 10f);//, RaycastHit2D[2] results
-        
         if (hit.collider && hit.collider.tag == "Player" && canShoot == true)
         {
             Debug.DrawLine(gameObject.transform.position, hit.collider.transform.position, Color.red, 2f);

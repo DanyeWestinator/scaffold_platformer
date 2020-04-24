@@ -101,7 +101,7 @@ public class PlayerHealth : MonoBehaviour
     ///
     /// Makes the player's sprite blink
     ///
-    IEnumerator BlinkSprite()
+    public IEnumerator BlinkSprite()
     {
         for (int i = 0; i < 8; ++i)
         {

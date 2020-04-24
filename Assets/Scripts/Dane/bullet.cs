@@ -5,7 +5,7 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     private float speed = 3f;
-    public float damage;
+    public float damage = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +17,17 @@ public class bullet : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<PlayerHealth>().TakeDamage(damage);
+            StartCoroutine(collision.GetComponent<PlayerHealth>().BlinkSprite());
+            Destroy(this.gameObject);
+        }
+    }
+
 
     public float getSpeed (){ return speed; }
     public void setSpeed (float newSpeed) { speed = newSpeed; }
