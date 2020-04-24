@@ -19,9 +19,9 @@ public class HurtBox : MonoBehaviour
     {
         if(collision.tag == "playerGunShot")//if bullet hits enemy
         {
-            mainObject.SetActive(false); //Deactivate the mainObject scene object. We could destroy, but in order to still have access to such object 
+            //mainObject.SetActive(false); //Deactivate the mainObject scene object. We could destroy, but in order to still have access to such object 
                                          //so we can do things like reviving it, we deactivate it instead.
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
         }
     }
     
