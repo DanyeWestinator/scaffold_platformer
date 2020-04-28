@@ -44,7 +44,6 @@ public class turret : MonoBehaviour
         if (distance <= range && canShoot)
         {
             canShoot = false;
-            print("shooting");
             StartCoroutine(Shoot());
             
         }
