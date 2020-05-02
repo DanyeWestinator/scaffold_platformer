@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     ///
     IEnumerator RestartGame(PlayerHealth playerHealth)
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.01f);
         playerHealth.HealDamage(playerHealth.maxHealth);
         player.transform.position = SpawnPosition.position;
     }
