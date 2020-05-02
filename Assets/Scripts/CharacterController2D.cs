@@ -148,6 +148,21 @@ public class CharacterController2D : MonoBehaviour
         {
             m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, m_JumpForceOnEnemies);
         }
+
+        if(collide.gameObject.tag == "Moving Platform")
+        {
+            transform.parent = collide.gameObject.transform;
+        }
+    }
+
+    //-////////////////////////////////////////////////////
+    ///
+    void OnTriggerExit2D(Collider2D collide)
+    {
+        if (collide.gameObject.tag == "Moving Platform")
+        {
+            transform.parent = null;
+        }
     }
 
     //-////////////////////////////////////////////////////
