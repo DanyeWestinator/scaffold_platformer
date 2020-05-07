@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject player; //The player GameObject on the scene
     private Transform SpawnPosition; //The location that the player will spawn
+    
+    public bool scoreDrop = true;
 
     //-////////////////////////////////////////////////////
     ///
@@ -26,6 +28,12 @@ public class GameManager : MonoBehaviour
     ///
     public void GameOver()
     {
+        if(scoreDrop)
+        {
+           scoreDrop = false;
+           ScoreScript.scoreValue /= 2;
+           StartCoroutine(DropScore());
+        }
         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
         StartCoroutine(RestartGame(playerHealth));
     }
@@ -39,5 +47,11 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(.01f);
         playerHealth.HealDamage(playerHealth.maxHealth);
         player.transform.position = SpawnPosition.position;
+    }
+    
+    IEnumerator DropScore()
+    {
+       yield return new WaitForSeconds(0.3f);
+       scoreDrop = true;
     }
 }

@@ -7,18 +7,23 @@ using UnityEngine;
 /// HurtBox is the "weakness" area of an entity, if the player hits an enemy on such spot the enemy takes damage. This script is attached to an object
 /// with a "HurtBox tag.
 ///
-public class HurtBox : MonoBehaviour 
+
+//changed from hurtbox to bounce only
+public class EnemyBounce : MonoBehaviour 
 {
-    public GameObject mainObject;
+    //public GameObject mainObject;
 
     //-////////////////////////////////////////////////////
     ///
     /// Gets call when a trigger collision happens on the game scene
     ///
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(collision.tag == "playerGunShot")//if bullet hits enemy
+        if(other.gameObject.tag == "BounceBox")
         {
+           float x_velocity = transform.parent.GetComponent<Rigidbody2D>().velocity.x;
+           transform.parent.GetComponent<Rigidbody2D>().velocity = new Vector2(x_velocity, 12);
+           ScoreScript.scoreValue += 1;
             //mainObject.SetActive(false); //Deactivate the mainObject scene object. We could destroy, but in order to still have access to such object 
                                          //so we can do things like reviving it, we deactivate it instead.
             //Destroy(collision.gameObject);

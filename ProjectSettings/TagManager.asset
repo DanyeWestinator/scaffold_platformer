@@ -7,6 +7,8 @@ TagManager:
   - HurtBox
   - HitBox
   - playerGunShot
+  - BounceBox
+  - WallOrGround
   layers:
   - Default
   - TransparentFX
