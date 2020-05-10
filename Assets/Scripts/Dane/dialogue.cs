@@ -107,6 +107,7 @@ public class dialogue : MonoBehaviour
     private string currentText;
     private string currentSpeaker;
     private List<String> currentResponses;
+    private int lastButton;
 
     public Text displayText;
     public Text displaySpeaker;
@@ -156,8 +157,21 @@ public class dialogue : MonoBehaviour
         }
         currentSpeaker = nodes[0].getSpeaker();
         currentText = nodes[0].getText();
+        
         currentResponses = nodes[0].getResponses().ToList();
         updateScreen();
+    }
+
+    dialogueNode findNode(string text)
+    {
+        foreach (dialogueNode node in nodes)
+        {
+            if (node.getText() == text)
+            {
+                return node;
+            }
+        }
+        return null;
     }
 
     private int speakerNum(string speaker)
@@ -168,17 +182,50 @@ public class dialogue : MonoBehaviour
                 return 0;
             case "Tester":
                 return 1;
+            case "Snord":
+                return 1;
+            case "Player":
+                return 0;
     
             default:
                 return 0;
         }
     }
 
+
     void updateScreen()
     {
         displaySpeaker.text = currentSpeaker;
         displayText.text = currentText;
         speakerSprite.sprite = speakerSprites[speakerNum(currentSpeaker)];
+        
+        for (int i = 0; i < 4; i++)
+        {
+            responseButtons[i].gameObject.SetActive(currentResponses.Count > i);
+            if (currentResponses.Count > i)
+            {
+                responseButtons[i].GetComponentInChildren<Text>().text = currentResponses[i];
+            }
+            if (currentResponses.Count == 1)
+            {
+                responseButtons[0].GetComponentInChildren<Text>().text = "Continue";
+            }
+            
+        }
+    }
+
+    public void getButtonPressed(int i)
+    {
+        lastButton = i;
+        string responseSelected = currentResponses[i];
+        //print("pressing button " + i);
+        //print(responseSelected);
+        print(findNode(responseSelected).ToString());
+        dialogueNode node = findNode(responseSelected);
+        currentSpeaker = node.getSpeaker();
+        currentText = node.getText();
+        currentResponses = node.getResponses().ToList();
+        updateScreen();
     }
 
 }

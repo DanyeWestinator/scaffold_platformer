@@ -1,0 +1,9 @@
+Snord|Welcome to Snord's swords! I'm Snord!|1 5
+Player|Hail and well met!|2
+Snord|Finest swords only, for such a distinguished guest! Feel free to peruse my wares|3
+Player|Are your swords sharp?|-1
+Player|Do you have axes|-1
+Player|Y'all got swords?|6
+Snord|Just skippin' pleasantries, I see. Noted|7 8
+Player|Apologies, I'll start over. Greetings, friend!|-1
+Player|Places to be, goblins to kill, you know how it is|-1
