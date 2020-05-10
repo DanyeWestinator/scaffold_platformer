@@ -21,7 +21,9 @@ public class snailHitBox : MonoBehaviour
         {
             //mainObject.SetActive(false); //Deactivate the mainObject scene object. We could destroy, but in order to still have access to such object 
                                          //so we can do things like reviving it, we deactivate it instead.
-            Destroy(collision.gameObject);
+            //float bulletScore = collision.gameObject.GetComponent<bullet>().damage;
+            //ScoreScript.scoreValue += (int) bulletScore;
+            Destroy(collision.gameObject); // gets rid of bullet upon impact
         }
     }
     

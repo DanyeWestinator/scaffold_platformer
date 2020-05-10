@@ -14,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public float maxHealth;
     public float currentHealth;
+    public float scoreMultiplier = 1;
     public Image healthBarEnemy; //UI Bar
     public GameManager gameManager;
     private SpriteRenderer enemySprite;
@@ -41,11 +42,15 @@ public class EnemyHealth : MonoBehaviour
 
             currentHealth -= damage;
             float health = currentHealth / maxHealth;
+            
+            ScoreScript.scoreValue += (int) damage;
+            
             if(healthBarEnemy != null)
                healthBarEnemy.fillAmount = health;
             if(currentHealth <= 0)      //If health goes to 0 or below, call GameOver in GameManager
             {
                 //gameManager.GameOver();
+                ScoreScript.scoreValue += (int) (maxHealth * scoreMultiplier);
                 mainObject.SetActive(false);
             }
         //}
