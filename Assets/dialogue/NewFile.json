@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Start",
+		"tags": "Player",
+		"body": "Welcome to Snord's Swords! [[Answer:Node|Player1.1]]",
+		"position": {
+			"x": 463,
+			"y": 70
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player1.1",
+		"tags": "Player",
+		"body": "Howdy!",
+		"position": {
+			"x": 177,
+			"y": 312
+		},
+		"colorID": 1
+	}
+]

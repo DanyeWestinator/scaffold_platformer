@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 860586}
   - component: {fileID: 860585}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,12 +153,12 @@ RectTransform:
   m_Children:
   - {fileID: 162148784}
   m_Father: {fileID: 10075604}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -100, y: -50}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &860585
 MonoBehaviour:
@@ -202,7 +202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 860586}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 69022964}
+        m_MethodName: getButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &860586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,15 +278,15 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 601474847}
+  - {fileID: 1034924248}
   - {fileID: 860584}
   - {fileID: 151408919}
-  - {fileID: 1034924248}
   m_Father: {fileID: 48938977}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -33.2}
+  m_AnchoredPosition: {x: 0, y: -46.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &48938973
@@ -391,6 +402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69022965}
   - component: {fileID: 69022964}
+  - component: {fileID: 69022966}
   m_Layer: 0
   m_Name: dialogueManager
   m_TagString: Untagged
@@ -405,12 +417,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69022963}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbee080c636062c4e9463ca02e791989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  responses: {fileID: 4900000, guid: 16c8954ccb8ab4a449b9ad7a15a8fdcf, type: 3}
+  responses: {fileID: 4900000, guid: 1ea8f179535c7274289359473dcffae9, type: 3}
   displayText: {fileID: 87625648}
   displaySpeaker: {fileID: 937488736}
   speakerSprite: {fileID: 1797571784}
@@ -421,10 +433,12 @@ MonoBehaviour:
   - {fileID: 0}
   responseButtons:
   - {fileID: 601474848}
+  - {fileID: 1034924249}
   - {fileID: 860585}
   - {fileID: 151408920}
-  - {fileID: 1034924249}
-  spritePairs: []
+  spritePairs:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &69022965
 Transform:
   m_ObjectHideFlags: 0
@@ -439,6 +453,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &69022966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69022963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3119d20ab557b4d8eef11c3287ef2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JSONSource: {fileID: 4900000, guid: cc791476b56b355479e102656953ded6, type: 3}
 --- !u!1 &87625646
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +624,7 @@ GameObject:
   - component: {fileID: 151408921}
   - component: {fileID: 151408920}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Button3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,12 +643,12 @@ RectTransform:
   m_Children:
   - {fileID: 1369808925}
   m_Father: {fileID: 10075604}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 100, y: -50}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151408920
 MonoBehaviour:
@@ -665,7 +692,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 151408921}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 69022964}
+        m_MethodName: getButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &151408921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,7 +799,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -770,7 +808,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Button2
 --- !u!222 &162148786
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -875,7 +913,7 @@ GameObject:
   - component: {fileID: 601474849}
   - component: {fileID: 601474848}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -898,8 +936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -100, y: 20}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &601474848
 MonoBehaviour:
@@ -943,7 +981,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 601474849}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 69022964}
+        m_MethodName: getButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &601474849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,7 +1161,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1121,7 +1170,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Button0
 --- !u!222 &867713370
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1277,7 +1326,7 @@ GameObject:
   - component: {fileID: 1034924250}
   - component: {fileID: 1034924249}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Button1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1296,12 +1345,12 @@ RectTransform:
   m_Children:
   - {fileID: 1623159525}
   m_Father: {fileID: 10075604}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 100, y: 20}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034924249
 MonoBehaviour:
@@ -1345,7 +1394,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1034924250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 69022964}
+        m_MethodName: getButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1034924250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,7 +1792,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1741,7 +1801,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Button3
 --- !u!222 &1369808927
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1928,7 +1988,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1937,7 +1997,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Button1
 --- !u!222 &1623159527
 CanvasRenderer:
   m_ObjectHideFlags: 0

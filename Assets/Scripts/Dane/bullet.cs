@@ -9,7 +9,7 @@ public class bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(this.gameObject, 5f);
+        Destroy(this.gameObject, 3f);
     }
 
     // Update is called once per frame
@@ -26,6 +26,30 @@ public class bullet : MonoBehaviour
             StartCoroutine(collision.GetComponent<PlayerHealth>().BlinkSprite());
             Destroy(this.gameObject);
         }
+        
+        //don't let bullet go through walls
+        if(collision.tag == "WallOrGround")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //again don't let bullet go through walls
+        if(collision.tag == "WallOrGround")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //again don't let bullet go through walls
+        if(collision.tag == "WallOrGround")
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 
@@ -34,4 +58,5 @@ public class bullet : MonoBehaviour
     
     //public float getDamage (){ return damage; }
     //public void setDamage (float newDamage) { damage = newDamage; }
+    
 }
