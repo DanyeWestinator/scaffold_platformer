@@ -37,10 +37,13 @@ public class Node
         foreach (Match x in next)
         {
             string temp = x.Value;
+            temp = temp.Replace("%", "");
+            Debug.Log(temp);
             temp = temp.Replace("%%%", "");
             functions.Add(temp);
         }
         this.text = Regex.Replace(text, pattern, "").Trim();
+        this.text = Regex.Replace(this.text, pattern2, "");
     }
 
     public void updateDict(string next, string text)
@@ -151,7 +154,16 @@ public class dialogueJSON : MonoBehaviour
     {
         string nextTitle = currentNode.getResponseTitles()[i];
         currentNode = nodes.Find(next => next.getTitle() == nextTitle);
+        functions();
         updateDisplay();
+    }
+
+    void functions()
+    {
+        if (currentNode.getFunctions().Contains("lowerScore 1000"))
+        {
+            ScoreScript.scoreValue -= 1000;
+        }
     }
     
     void parseJSON()
