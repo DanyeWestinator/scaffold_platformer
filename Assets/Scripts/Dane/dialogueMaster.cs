@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class dialogueMaster : MonoBehaviour
 {
-    private static int score;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject dialogueCanvas;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void updateScore()
-    {
-        score = ScoreScript.scoreValue;
+        if (collision.tag == "Player")
+        {
+            dialogueCanvas.SetActive(true);
+            this.gameObject.GetComponent<dialogueMaster>().enabled = false;
+            Destroy(this.gameObject.GetComponent<dialogueMaster>());
+        }
     }
 }

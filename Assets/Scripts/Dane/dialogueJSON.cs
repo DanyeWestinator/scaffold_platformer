@@ -38,7 +38,6 @@ public class Node
         {
             string temp = x.Value;
             temp = temp.Replace("%", "");
-            Debug.Log(temp);
             temp = temp.Replace("%%%", "");
             functions.Add(temp);
         }
@@ -110,11 +109,14 @@ public class dialogueJSON : MonoBehaviour
     private Node currentNode;
 
     //display things
-    public List<Button> responseButtons = new List<Button> { null, null, null, null };
+    public List<Button> responseButtons = new List<Button> { null, null, null, null, null };
     public Text displayText;
     public Text speakerText;
     private Sprite speakerSprite;
     public Image speakerImage;
+
+    //Dane needs to stop hardcoding things
+    public GameObject firstEnemy;
 
     // Start is called before the first frame update
     void Start()
@@ -146,6 +148,10 @@ public class dialogueJSON : MonoBehaviour
                     responseButtons[i].GetComponentInChildren<Text>().text = "Continue";
                 }
             }
+            if (responses.Count == 0)
+            {
+                responseButtons[4].gameObject.SetActive(true);
+            }
            
         }
     }
@@ -157,12 +163,19 @@ public class dialogueJSON : MonoBehaviour
         functions();
         updateDisplay();
     }
+    public void closeDialogue()
+    {
+        transform.root.gameObject.SetActive(false);
+    }
 
     void functions()
     {
         if (currentNode.getFunctions().Contains("lowerScore 1000"))
         {
-            ScoreScript.scoreValue -= 1000;
+            ScoreScript.scoreValue -= 50;
+            firstEnemy.GetComponent<Patrol>().enabled = false;
+            Destroy(firstEnemy.transform.Find("SnailEnemyA1/SnailHitBox").gameObject);
+            //firstEnemy.GetComponentInChildren<BoxCollider2D>().gameObject.SetActive(false);
         }
     }
     

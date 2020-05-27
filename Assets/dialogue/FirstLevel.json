@@ -92,7 +92,7 @@
 	{
 		"title": "Player.8",
 		"tags": "Player",
-		"body": "One thousand grand, total. %%%lowerScore 1000%%%[[Answer:Player.9|Player.9]]",
+		"body": "One thousand grand, total.[[Answer:Player.9|Player.9]]",
 		"position": {
 			"x": 1315,
 			"y": -216
@@ -102,7 +102,7 @@
 	{
 		"title": "Player.9",
 		"tags": "Underling",
-		"body": "[i]One thousand grand?![/i] Man, you [i]really[/i] want in, don't you? Well, I guess we agreed to a deal. Head on in.",
+		"body": "[i]One thousand grand?![/i] Man, you [i]really[/i] want in, don't you? Well, I guess we agreed to a deal. Head on in. %%%lowerScore 1000%%%",
 		"position": {
 			"x": 1542,
 			"y": -214
