@@ -166,6 +166,7 @@ public class dialogueJSON : MonoBehaviour
     public void closeDialogue()
     {
         transform.root.gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     void functions()

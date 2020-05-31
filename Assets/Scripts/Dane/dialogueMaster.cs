@@ -12,6 +12,7 @@ public class dialogueMaster : MonoBehaviour
             dialogueCanvas.SetActive(true);
             this.gameObject.GetComponent<dialogueMaster>().enabled = false;
             Destroy(this.gameObject.GetComponent<dialogueMaster>());
+            Time.timeScale = 0f;
         }
     }
 }

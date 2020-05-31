@@ -7,6 +7,9 @@ public class enemyShoot : MonoBehaviour
     public GameObject bullet;
     public float timeBetweenShots = 1f;
 
+    public float bulletSpeed = 1f;
+    public float bulletDamage = 1f;
+
     private bool canShoot = true;
 
     // Start is called before the first frame update
@@ -20,9 +23,10 @@ public class enemyShoot : MonoBehaviour
     {
         Vector3 direction = new Vector3(gameObject.transform.localScale.x * -1, 0f, 0f);
         RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, direction, 10f);//, RaycastHit2D[2] results
+        
         if (hit.collider && hit.collider.tag == "Player" && canShoot == true)
         {
-            Debug.DrawLine(gameObject.transform.position, hit.collider.transform.position, Color.red, 2f);
+            //Debug.DrawLine(gameObject.transform.position, hit.collider.transform.position, Color.red, 2f);
             canShoot = false;
             StartCoroutine(Shoot(timeBetweenShots));
         }
@@ -32,8 +36,9 @@ public class enemyShoot : MonoBehaviour
     IEnumerator Shoot(float time)
     {
         GameObject toShoot = Instantiate(bullet, gameObject.transform.position, Quaternion.identity);
+        toShoot.GetComponent<bullet>().damage = bulletDamage;
         float speed = bullet.GetComponent<bullet>().getSpeed();
-        toShoot.GetComponent<Rigidbody2D>().velocity = Vector2.left * speed * gameObject.transform.localScale.x;
+        toShoot.GetComponent<Rigidbody2D>().velocity = Vector2.left * speed * gameObject.transform.localScale.x * bulletSpeed;
         Vector3 newScale = toShoot.transform.localScale;
         newScale.x *= gameObject.transform.localScale.x;
         toShoot.transform.localScale = newScale;
