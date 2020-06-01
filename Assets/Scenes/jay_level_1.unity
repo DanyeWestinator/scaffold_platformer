@@ -5269,7 +5269,7 @@ MonoBehaviour:
   repathRate: 0.18
   canSearch: 1
   canMove: 1
-  maxSpeed: 3.5
+  maxSpeed: 6
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -17638,7 +17638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.019993, y: -3.108353, z: -10}
+  m_LocalPosition: {x: -10.019995, y: -3.108353, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -31369,8 +31369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4892102103464601775, guid: d69f53979f7fca4488235d70a3dcbae2, type: 3}
-  timeBetweenShots: 2
-  bulletSpeed: 2
+  timeBetweenShots: 1
+  bulletSpeed: 4
   bulletDamage: 0.5
 --- !u!114 &1839190850
 MonoBehaviour:
@@ -31763,7 +31763,7 @@ PrefabInstance:
     - target: {fileID: 224608292082606182, guid: 0c60fa36e5c69e64689817e4feb2f021,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.79997253
+      value: 0.7999573
       objectReference: {fileID: 0}
     - target: {fileID: 224608292082606182, guid: 0c60fa36e5c69e64689817e4feb2f021,
         type: 3}
