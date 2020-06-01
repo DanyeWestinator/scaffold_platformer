@@ -123,6 +123,9 @@ public class dialogueJSON : MonoBehaviour
     {
         parseJSON();
         currentNode = nodes[0];
+        print(currentNode.ToString());
+        print(transform.root);
+        print(this.gameObject);
         updateDisplay();
     }
 
@@ -158,6 +161,7 @@ public class dialogueJSON : MonoBehaviour
 
     public void getButtonPressed(int i)
     {
+        print(currentNode.ToString());
         string nextTitle = currentNode.getResponseTitles()[i];
         currentNode = nodes.Find(next => next.getTitle() == nextTitle);
         functions();

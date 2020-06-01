@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Player1.1",
+		"tags": "Player",
+		"body": "Oh boy here I go killing again! [[Answer:Player2.1|Player2.1]]",
+		"position": {
+			"x": 448,
+			"y": 223
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player2.1",
+		"tags": "Player",
+		"body": "Suck my farts, boss!",
+		"position": {
+			"x": 668,
+			"y": 228
+		},
+		"colorID": 0
+	}
+]
