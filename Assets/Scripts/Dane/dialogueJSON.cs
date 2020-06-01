@@ -182,6 +182,10 @@ public class dialogueJSON : MonoBehaviour
             Destroy(firstEnemy.transform.Find("SnailEnemyA1/SnailHitBox").gameObject);
             //firstEnemy.GetComponentInChildren<BoxCollider2D>().gameObject.SetActive(false);
         }
+        if (currentNode.getFunctions().Contains("credits"))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("credits");
+        }
     }
     
     void parseJSON()

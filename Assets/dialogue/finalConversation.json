@@ -1,0 +1,322 @@
+[
+	{
+		"title": "Player1.1",
+		"tags": "Player",
+		"body": "Hands up, evildoer! [[Answer:Boss2.1|Boss2.1]]",
+		"position": {
+			"x": -1571,
+			"y": -4734
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss2.1",
+		"tags": "Boss",
+		"body": "Oh well if it isn't the police. Well, without a valid warrant, I am totally safe! Mwuahahaha! [[Answer:Player3.1|Player3.1]]",
+		"position": {
+			"x": -1565,
+			"y": -4492
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player3.1",
+		"tags": "Player",
+		"body": "<i>show warrant</i>  [[Answer:Boss4.2|Boss4.2]]",
+		"position": {
+			"x": -1558,
+			"y": -4226
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss4.1",
+		"tags": "Boss",
+		"body": "A thousand and one curses on you! [[Answer:Boss4.3|Boss4.3]]",
+		"position": {
+			"x": -1575,
+			"y": -3771
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss4.2",
+		"tags": "Boss",
+		"body": "Hmm. Well, everything seems to be in order [[Answer:Boss4.1|Boss4.1]]",
+		"position": {
+			"x": -1560,
+			"y": -4001
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss4.3",
+		"tags": "Boss",
+		"body": "How did you defeat my elite forces, anyways? [[Answer:Player5.1|Player5.1]] [[Answer:Player5.2|Player5.2]] [[Answer:Player5.3|Player5.3]]",
+		"position": {
+			"x": -1575,
+			"y": -3540
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player5.1",
+		"tags": "Player",
+		"body": "Ha! You call those elite? A troop of cub scouts with water pistols could have defeated them! [[Answer:Boss6.1|Boss6.1]]",
+		"position": {
+			"x": -2279,
+			"y": -3268
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player5.2",
+		"tags": "Player",
+		"body": "Well, it wasn't hard. After all, they are snails... [[Answer:Boss6.3|Boss6.3]]",
+		"position": {
+			"x": -1519,
+			"y": -3285
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player5.3",
+		"tags": "Player",
+		"body": "They don't call me \"the cop who can't be stopped\" for nothing [[Answer:Boss6.5|Boss6.5]]",
+		"position": {
+			"x": -783,
+			"y": -3297
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss6.1",
+		"tags": "Boss",
+		"body": "Well there's no need to be rude about it [[Answer:Boss6.2|Boss6.2]]",
+		"position": {
+			"x": -2296,
+			"y": -3043
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss6.2",
+		"tags": "Boss",
+		"body": "Can't we just have a civilized rivalry? [[Answer:Player7.1|Player7.1]] [[Answer:Player7.2|Player7.2]]",
+		"position": {
+			"x": -2296,
+			"y": -2802
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss6.3",
+		"tags": "Boss",
+		"body": "Snails?! All of them?! [[Answer:Boss6.4|Boss6.4]]",
+		"position": {
+			"x": -1521,
+			"y": -3037
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss6.4",
+		"tags": "Boss",
+		"body": "Even lil Jerry? The guy at the front? Wears glasses and a hat? [[Answer:Player7.3|Player7.3]] [[Answer:Player7.4|Player7.4]]",
+		"position": {
+			"x": -1529,
+			"y": -2804
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player7.1",
+		"tags": "Player",
+		"body": "You're right, I'm sorry [[Answer:Boss8.1|Boss8.1]]",
+		"position": {
+			"x": -2524,
+			"y": -2521
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player7.2",
+		"tags": "Player",
+		"body": "The only thing that will be civilized is when I wear a suit to your funeral! [[Answer:Boss8.3|Boss8.3]]",
+		"position": {
+			"x": -2118,
+			"y": -2527
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player7.3",
+		"tags": "Player",
+		"body": "You know, now that you mention it, he seemed totally human. Yep, nothing snail like about him [[Answer:Boss8.4|Boss8.4]]",
+		"position": {
+			"x": -1547,
+			"y": -2540
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player7.4",
+		"tags": "Player",
+		"body": "Yep, even him. The mustache is fake [[Answer:Boss8.5|Boss8.5]]",
+		"position": {
+			"x": -1099,
+			"y": -2544
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss6.5",
+		"tags": "Boss",
+		"body": "Well prepare to be stopped, cop! [[Answer:Player7.5|Player7.5]] [[Answer:Player9.2|Player9.2]]",
+		"position": {
+			"x": -774,
+			"y": -3050
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss8.1",
+		"tags": "Boss",
+		"body": "Thank you! Too often do forget the pleasantries while committing crimes [[Answer:Boss8.2|Boss8.2]]",
+		"position": {
+			"x": -2536,
+			"y": -2268
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss8.2",
+		"tags": "Boss",
+		"body": "Now, shall we fight? [[Answer:Player9.1|Player9.1]] [[Answer:Player9.2|Player9.2]]",
+		"position": {
+			"x": -2541,
+			"y": -2045
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player9.1",
+		"tags": "Player",
+		"body": "I would like nothing more",
+		"position": {
+			"x": -2717,
+			"y": -1783
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player9.2",
+		"tags": "Player",
+		"body": "Actually, can we start this whole conversation over again? [[Answer:Player1.1|Player1.1]]",
+		"position": {
+			"x": -2233,
+			"y": -1788
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss8.3",
+		"tags": "Boss",
+		"body": "Ha! I think not! Shall we fight then, so I can crush you? [[Answer:Player9.2|Player9.2]] [[Answer:Player9.3|Player9.3]]",
+		"position": {
+			"x": -2000,
+			"y": -2268
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player9.3",
+		"tags": "Player",
+		"body": "Prepare to become escargot!",
+		"position": {
+			"x": -1839,
+			"y": -1802
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss8.4",
+		"tags": "Boss",
+		"body": "Well that's some small comfort. Now I can destroy you! [[Answer:Player9.2|Player9.2]] [[Answer:Player9.4|Player9.4]]",
+		"position": {
+			"x": -1568,
+			"y": -2259
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player9.4",
+		"tags": "Player",
+		"body": "Not if I destroy you first!",
+		"position": {
+			"x": -1529,
+			"y": -1970
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss8.5",
+		"tags": "Boss",
+		"body": "I feel so betrayed. He played saxophone at my sister's wedding! [[Answer:Player9.5|Player9.5]] [[Answer:Player9.6|Player9.6]]",
+		"position": {
+			"x": -1096,
+			"y": -2302
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player9.5",
+		"tags": "Player",
+		"body": "This feels like a bad time. I'm just gonna go... %%%credits%%%",
+		"position": {
+			"x": -1188,
+			"y": -2029
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player9.6",
+		"tags": "Player",
+		"body": "Would a fight to the death make you feel better? [[Answer:Boss10.1|Boss10.1]]",
+		"position": {
+			"x": -845,
+			"y": -2091
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Boss10.1",
+		"tags": "Boss",
+		"body": "You know, it really would. Let's do this! [[Answer:Player11.1|Player11.1]] [[Answer:Player9.2|Player9.2]]",
+		"position": {
+			"x": -894,
+			"y": -1778
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player11.1",
+		"tags": "Player",
+		"body": "Let's go, buddy",
+		"position": {
+			"x": -586,
+			"y": -1625
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Player7.5",
+		"tags": "Player",
+		"body": "AHHHHHH!!! [i]attacks[/i]",
+		"position": {
+			"x": -503,
+			"y": -2827
+		},
+		"colorID": 0
+	}
+]
